@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container"><form class="row g-3" method="POST" action="/updateprofile">
+{% csrf_token %}
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="firstname" name="firstname" value={{user.first_name}}>
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="lastname" name="lastname" value={{user.last_name}}>
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="text" class="form-control" id="email" name="email" value={{user.email}}>
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">bio</label>
+    <input type="text" class="form-control" id="bio" name="bio" value={{data.bio}}>
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">location</label>
+    <input type="text" class="form-control" id="location" name="location" value={{data.location}}>
+  </div>
+  
+  
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</form> </div>
+{% endblock content %}
