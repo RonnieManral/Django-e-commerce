@@ -6,23 +6,4 @@ In this user can see different products according to products category wise. Cli
 I have provided signup,login and logout features to add different users and users can also fill 
 his/her personal details and can also edit them.
 User can only add products to the cart if the user is authenticated or login to the website otherwise the user is not allowed to add products in the cart.
-<p id="app"></p>
-<script>
-    var app = document.getElementById('app');
 
-        var typewriter = new Typewriter(app, {
-            loop: true
-        });
-
-        typewriter.typeString('Python programming')
-            .pauseFor(2500)
-            .deleteAll()
-            .typeString('Strings can be removed')
-            .pauseFor(2500)
-            .deleteChars(7)
-            .typeString('<strong>altered!</strong>')
-            .pauseFor(2500)
-            .start();
-
-
-    </script>
